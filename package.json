@@ -1,0 +1,17 @@
+{
+  "name": "critique_api",
+  "version": "1.0.0",
+  "description": "A headless wordpress url, api calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "express": "^4.17.1",
+    "flatted": "^3.2.2",
+    "wpapi": "^1.2.2"
+  }
+}
