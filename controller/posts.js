@@ -16,7 +16,7 @@ module.exports = {
       // fetch post
       //   const posts = await wp.posts().get();
       const posts = await axios.get(
-        "https://critiqsite.com/wp-json/wp/v2/posts/?page=1&per_page=10&_fields=id,date,title,content,custom,link"
+        "https://critiqsite.com/wp-json/wp/v2/posts/?page=1&per_page=10&_categories[]_fields=id,date,title,content,custom,link"
       );
 
       if (posts) {
