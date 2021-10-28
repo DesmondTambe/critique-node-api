@@ -1,16 +1,19 @@
 const axios = require("axios");
+const baseURL = require("../utils/baseURL");
 
 module.exports = {
   fetchPostCategories: async (req, res) => {
     try {
+      // fetch posts categories from wordpress
       const categoriesPosts = await axios.get(
-        "https://critiqsite.com/wp-json/wp/v2/categories/?_fields=id,count,name,slug,taxonomy,link"
+        `${baseURL}wp/v2/categories/?_fields=id,count,name,slug,taxonomy,link`
       );
 
-      console.log(categoriesPosts.data);
-      res.send(categoriesPosts.data);
+      return res.status(200).json(categoriesPosts.data);
     } catch (error) {
-      console.log("CategoriesError", error);
+      return res
+        .status(error.port)
+        .send("Failed to fetch data, Please check your internet connection.");
     }
   },
 };

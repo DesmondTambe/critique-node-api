@@ -1,8 +1,3 @@
-const WPAPI = require("wpapi");
+const baseURL = "https://critiqsite.com/wp-json/";
 
-// create connection to wordpress headless content
-const wp = new WPAPI({
-  endpoint: "https://critiqsite.com/wp-json",
-});
-
-module.exports = wp;
+module.exports = baseURL;
