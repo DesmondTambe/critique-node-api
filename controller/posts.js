@@ -1,5 +1,5 @@
 const axios = require("axios");
-const baseURL = require("../utils/baseURL");
+const baseURL = require("../utils/baseURL.js");
 
 module.exports = {
   fetchPostsWP: async (req, res) => {
